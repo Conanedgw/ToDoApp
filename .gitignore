@@ -1,0 +1,27 @@
+# Java関連
+*.class
+*.jar
+*.war
+*.ear
+
+# Spring Boot関連
+target/
+bin/
+*.log
+*.iml
+.idea/
+*.iws
+*.ipr
+.vscode/
+
+# Eclipse関連
+.project
+.classpath
+.settings/
+
+# OS関連
+.DS_Store
+Thumbs.db
+
+# 環境変数を使うためのプロパティ（GitHubに上げない）
+src/main/resources/application.properties
