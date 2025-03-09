@@ -22,6 +22,3 @@ bin/
 # OS関連
 .DS_Store
 Thumbs.db
-
-# 環境変数を使うためのプロパティ（GitHubに上げない）
-src/main/resources/application.properties
