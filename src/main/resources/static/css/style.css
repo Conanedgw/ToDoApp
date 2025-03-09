@@ -1,0 +1,229 @@
+
+/* *************************************************** */
+
+/* 一覧表示 */
+
+/* *************************************************** */
+
+body {
+    background-color: #f4f6f8; /* 背景色：柔らかいグレー */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+/* コンテナ部分 */
+.container {
+    max-width: 800px;
+    margin: 50px auto; /* コンテンツを中央に配置 */
+    padding: 30px;
+    background-color: white; /* 背景を白に */
+    border-radius: 8px; /* 丸みをつける */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 優しい影をつける */
+}
+
+/* ヘッダー */
+.header {
+    background-color: #4A154B; /* Slackのダークテーマカラー */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* ヘッダーに影を追加 */
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* ヘッダーのタイトルに立体感 */
+}
+
+/* 項目名のスタイル */
+.task-headers {
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+/*    justify-content: space-between;  項目名を横並びに */
+}
+
+.task-name-header, .due-date-header {
+    width: 25%; /* タスク名と締め切りに均等な幅を設定 */
+    padding: 10px 20px; /* 内側にスペースを追加 */
+    background-color: rgb(0, 128, 64); /* 背景色：Slackのダークテーマカラー */
+    color: white; /* テキスト色を白に */
+    border-radius: 50px; /* 楕円形にする */
+    text-align: center; /* 中央にテキストを配置 */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* 軽い影を追加して立体感を出す */
+}
+
+.task-name-header {
+    margin-right: 128px; /* タスク名と締め切りの間にスペースを追加 */
+}
+
+.task-name-header, .due-date-header {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* 影を加えて立体感を追加 */
+}
+
+/* タスクのリスト */
+ul.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-group-item {
+    background-color: #f7f7f8; /* タスク項目の背景色 */
+    padding: 15px;
+    border: 1px solid #ddd; /* 枠線 */
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* 軽い影を加える */
+}
+
+.list-group-item:hover {
+    background-color: #e1e1e1; /* マウスホバー時に色を変更 */
+}
+
+/* ボタンのスタイル */
+.btn {
+    border-radius: 25px; /* 丸いボタン */
+    padding: 8px 20px;
+    border: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* ボタンにも影 */
+}
+
+.btn-primary {
+    background-color: #36C5F0; /* Slack風青色 */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #28a0d1;
+}
+
+.btn-danger {
+    background-color: #e01e5a; /* 赤色（削除ボタン） */
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #d71746;
+}
+
+.form-control {
+    border-radius: 25px; /* 入力フィールドも丸く */
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: #36C5F0; /* 入力時に青色に */
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* フォームの入力とボタンを並べる */
+.d-flex .form-control {
+    flex: 1;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #3D3D3D;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* メインタイトルに影 */
+}
+
+/* 小さなマージン */
+.mt-5 {
+    margin-top: 5rem;
+}
+
+/* タスク項目のフォーマット */
+.task-name, .due-date {
+    width: 45%; /* 同じサイズで表示 */
+}
+
+/* *************************************************** */
+
+/* ログイン画面のスタイル */
+
+/* *************************************************** */
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-header {
+    background-color: #4A154B;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-form label {
+    font-weight: bold;
+    color: #3D3D3D;
+}
+
+.login-form .form-control {
+    border-radius: 25px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.login-form .form-control:focus {
+    border-color: #36C5F0;
+}
+
+.login-form .btn-primary {
+    width: 100%;
+    background-color: #36C5F0;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.login-form .btn-primary:hover {
+    background-color: #28a0d1;
+}
+
+.error-message {
+    color: #e01e5a;
+    font-weight: bold;
+    margin-top: 15px;
+}

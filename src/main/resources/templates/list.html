@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/list_style.css}" />
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="header">
+            <h1>やることリスト</h1>
+        </div>
+
+        <!-- 項目名の追加 -->
+        <div class="task-headers">
+            <span class="task-name-header">やること</span>
+            <span class="due-date-header">締め切り</span>
+        </div>
+
+        <!-- タスクの一覧 -->
+        <ul class="list-group">
+            <li th:each="task : ${tasks}" class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="task-name" th:text="${task.taskName}"></span>
+                <!-- 日付をフォーマット -->
+                <span class="due-date" th:text="${task.formattedDueDate}"></span> <!-- フォーマット済みの日付を表示 -->
+                <!-- タスク削除フォーム -->
+                <form th:action="@{/tasks/delete/{id}(id=${task.id})}" method="post" style="display:inline;">
+                    <input type="hidden" name="_method" value="DELETE" />
+                    <button type="submit" class="btn btn-danger btn-sm">削除</button>
+                </form>
+            </li>
+        </ul>
+
+        <!-- タスクの追加フォーム -->
+        <form th:action="@{/tasks/add}" method="post" class="d-flex mt-4">
+            <input type="text" name="taskName" placeholder="やることを追加" required class="form-control me-2" />
+            <input type="datetime-local" name="dueDate" required class="form-control me-2" /> <!-- 日付ピッカー -->
+            <button type="submit" class="btn btn-primary">追加</button>
+        </form>
+		<br>
+		<!-- ログアウトボタン -->
+		<form th:action="@{/logout}" method="post" style="text-align: right; margin-bottom: 10px;">
+		    <button type="submit" class="btn btn-secondary">ログアウト</button>
+		</form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
